@@ -1,7 +1,10 @@
 {
     "name": "@ryb73/bs-winston",
     "sources": [
-        { "dir": "src" },
+        {
+            "dir": "src",
+            "public": ["Winston"]
+        },
         {
             "dir": "test",
             "type": "dev"

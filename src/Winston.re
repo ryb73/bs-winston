@@ -1,12 +1,18 @@
-open WinstonTypes;
+module Types = WinstonTypes;
+module Format = Format;
+module Transports = Transports;
+
+open Types;
 
 type t = logger;
+
+[@bs.val] external f: Types.transport => t = "";
 
 type options;
 [@bs.obj]
 external options:
-    ~level: string=? => ~format: Format.t=? => ~defaultMeta: Js.t({..})=? =>
-    ~transports: array(Transports.t)=? => unit => options = "";
+    ~level: string=? => ~format: Types.format=? => ~defaultMeta: Js.t({..})=? =>
+    ~transports: array(transport)=? => unit => options = "";
 
 [@bs.module "winston"] external createLogger: options => t = "";
 let createLogger = (~level=?, ~format=?, ~defaultMeta=?, ~transports=?, ()) =>

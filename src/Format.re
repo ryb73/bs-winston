@@ -1,4 +1,4 @@
-type t;
+type t = WinstonTypes.format;
 
 type namespace;
 [@bs.module "winston"] external format: namespace = "";
