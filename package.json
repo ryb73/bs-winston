@@ -1,0 +1,36 @@
+{
+  "name": "bs-winston",
+  "version": "0.0.1",
+  "description": "Bucklescript bindings for https://github.com/winstonjs/winston",
+  "main": "index.js",
+  "repository": {
+    "type": "git",
+    "url": "git@github.com:ryb73/bs-winston.git"
+  },
+  "bugs": {
+    "url": "https://github.com/ryb73/bs-winston/issues"
+  },
+  "homepage": "https://github.com/ryb73/bs-winston#readme",
+  "keywords": [
+    "reason",
+    "reasonml",
+    "bucklescript",
+    "logging",
+    "logger"
+  ],
+  "author": "Ryan",
+  "license": "MIT",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build": "npm run clean && bsb -make-world",
+    "watch": "npm run clean && bsb -make-world -w",
+    "clean": "rm -rf lib && bsb -clean-world",
+    "postinstall": "[ ! -f package-links.json ] || ppl link-file"
+  },
+  "peerDependencies": {
+    "bs-platform": "^4.0.0"
+  },
+  "dependencies": {
+    "winston": "^3.2.1"
+  }
+}
