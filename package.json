@@ -1,5 +1,5 @@
 {
-  "name": "bs-winston",
+  "name": "@ryb73/bs-winston",
   "version": "0.0.1",
   "description": "Bucklescript bindings for https://github.com/winstonjs/winston",
   "main": "index.js",

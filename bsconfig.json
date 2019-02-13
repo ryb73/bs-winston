@@ -1,5 +1,5 @@
 {
-    "name": "bs-winston",
+    "name": "@ryb73/bs-winston",
     "sources": [
         { "dir": "src" },
         {
