@@ -10,6 +10,11 @@
   "bugs": {
     "url": "https://github.com/ryb73/bs-winston/issues"
   },
+  "files": [
+    "/bsconfig.json",
+    "/src",
+    "/lib/js/src"
+  ],
   "homepage": "https://github.com/ryb73/bs-winston#readme",
   "keywords": [
     "reason",
