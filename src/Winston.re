@@ -39,3 +39,5 @@ let createLogger = (~level=?, ~format=?, ~defaultMeta=?, ~transports=?, ()) =>
 [@bs.send] external logO: t => string => Js.t({..}) => unit = "log";
 let log = (logger, level, message) => log(logger, levelToString(level), message);
 let logO = (logger, level, message) => logO(logger, levelToString(level), message);
+
+[@bs.send] external child: t => Js.t({..}) => t = "";

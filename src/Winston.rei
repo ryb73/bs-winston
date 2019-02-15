@@ -43,3 +43,5 @@ let silly: (t, string) => unit;
 let sillyO: (t, Js.t({.. })) => unit;
 let log: (t, Types.level, string) => unit;
 let logO: (t, Types.level, Js.t({.. })) => unit;
+
+let child: (t, Js.t({..})) => t;
