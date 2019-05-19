@@ -11,15 +11,17 @@ let newHack: unit => constructor => Js.t({..}) => t =
 
 [@bs.get] external console: namespace => constructor = "Console";
 let console = console(transports);
-let console = (~level=?, ()) =>
+let console = (~level=?, ~format: option(Format.t)=?, ()) =>
     newHack()(console, {
-        "level": Belt.Option.map(level, levelToString),
+        "level": Belt.Option.map(level, levelToString) |> Js.Undefined.fromOption,
+        "format": Js.Undefined.fromOption(format),
     });
 
 [@bs.get] external file: namespace => constructor = "File";
 let file = file(transports);
-let file = (~level=?, filename: string) =>
+let file = (~level=?, ~format: option(Format.t)=?, filename: string) =>
     newHack()(file, {
-        "level": Belt.Option.map(level, levelToString),
-        "filename": filename
+        "level": Belt.Option.map(level, levelToString) |> Js.Undefined.fromOption,
+        "format": Js.Undefined.fromOption(format),
+        "filename": filename,
     });

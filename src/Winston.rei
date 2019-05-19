@@ -18,8 +18,8 @@ module Format: {
 };
 module Transports: {
     type t = Types.transport;
-    let console: (~level: Types.level=?, unit) => t;
-    let file: (~level: Types.level=?, string) => t;
+    let console: (~level: Types.level=?, ~format: Format.t=?, unit) => t;
+    let file: (~level: Types.level=?, ~format: Format.t=?, string) => t;
 };
 
 type t = Types.logger;
