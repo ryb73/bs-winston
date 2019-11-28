@@ -12,8 +12,7 @@
   },
   "files": [
     "/bsconfig.json",
-    "/src",
-    "/lib/js/src"
+    "/src"
   ],
   "homepage": "https://github.com/ryb73/bs-winston#readme",
   "keywords": [
@@ -33,9 +32,12 @@
     "postinstall": "[ ! -f package-links.json ] || ppl link-file"
   },
   "peerDependencies": {
-    "bs-platform": "^5.0.0"
+    "bs-platform": "^5.0.0 || ^6.0.0"
   },
   "dependencies": {
     "winston": "^3.2.1"
+  },
+  "devDependencies": {
+    "bs-platform": "^6.0.0"
   }
 }
