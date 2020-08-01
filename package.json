@@ -38,6 +38,6 @@
     "winston": "^3.2.1"
   },
   "devDependencies": {
-    "bs-platform": "^6.0.0"
+    "bs-platform": "^8.0.3"
   }
 }
